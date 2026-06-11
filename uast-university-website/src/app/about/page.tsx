@@ -8,7 +8,7 @@ export default function AboutPage() {
         <div className="rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-10">
           <div className="inline-flex items-center gap-2 rounded-[10px] bg-green-600/20 border border-green-500/30 px-4 py-2">
             <span className="inline-block h-2 w-2 rounded-full bg-green-300" />
-            <span className="text-green-200 font-semibold text-sm">ABOUT UAST IHUgh</span>
+            <span className="text-green-200 font-semibold text-sm">ABOUT UAST IHUGH</span>
           </div>
 
           <h1 className="mt-6 text-3xl md:text-5xl font-bold text-white">
