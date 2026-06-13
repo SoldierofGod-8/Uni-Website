@@ -7,7 +7,8 @@ import * as THREE from "three";
 import { useEffect, useRef } from "react";
 
 function GlobeLogo() {
-  const texture = useLoader(TextureLoader, "/logo.png");
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const texture = useLoader(TextureLoader, `${basePath}/logo.png`);
   const globeRef = useRef<THREE.Mesh>(null!);
 
   useEffect(() => {
