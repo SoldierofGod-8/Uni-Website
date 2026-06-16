@@ -4,7 +4,7 @@ import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import { Float } from "@react-three/drei";
 import { TextureLoader } from "three";
 import * as THREE from "three";
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 
 function GlobeLogo() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -121,12 +121,14 @@ export default function Logo3D({ className }: { className?: string }) {
 
         <CameraIntro />
 
-        <Float speed={0.35} rotationIntensity={0} floatIntensity={2.0}>
-          <group>
-            <GlobeLogo />
-            <EnergyRings />
-          </group>
-        </Float>
+        <Suspense fallback={null}>
+          <Float speed={0.35} rotationIntensity={0} floatIntensity={2.0}>
+            <group>
+              <GlobeLogo />
+              <EnergyRings />
+            </group>
+          </Float>
+        </Suspense>
       </Canvas>
     </div>
   );

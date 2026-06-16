@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 
@@ -30,13 +29,11 @@ const MENU_GROUPS = [
       { href: "/student-life", label: "Student Life" },
       { href: "/staff", label: "Staff" },
       { href: "/partnership", label: "Partnerships" },
+      { href: "/endowment", label: "Endowment" },
       { href: "/athletics", label: "Athletics" },
     ],
   },
 ];
-
-// Flat list for desktop navbar
-const ALL_LINKS = MENU_GROUPS.flatMap((g) => g.items);
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -69,47 +66,26 @@ export default function Navbar() {
       <div ref={wrapRef} className="mx-auto max-w-7xl">
         <div className="rounded-[10px] bg-white/5 backdrop-blur-md border border-white/10 px-4 py-3 flex items-center justify-between">
           {/* Brand */}
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center">
-              <Image
+          <Link href="/" className="flex items-center gap-3 shrink-0">
+            <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center overflow-hidden">
+              <img
                 src="/logo.png"
                 alt="UAST Ihugh"
-                width={40}
-                height={40}
-                className="w-10 h-10 rounded-full"
-                priority
+                className="w-full h-full object-cover"
               />
             </div>
 
             <div className="text-white leading-tight hidden sm:block">
-              <p className="text-sm md:text-base font-semibold">
+              <p className="text-xs md:text-sm font-semibold">
                 <span className="block">University of Agriculture,</span>
                 <span className="block">Science & Technology</span>
               </p>
-              <p className="text-xs text-green-300">Ihugh</p>
+              <p className="text-[10px] md:text-xs text-green-300">Ihugh</p>
             </div>
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {ALL_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className={[
-                  "px-3 py-2 rounded-[10px] text-xs font-semibold transition-all whitespace-nowrap",
-                  pathname === l.href
-                    ? "bg-green-600 text-white shadow-lg shadow-green-500/20"
-                    : "text-white/80 hover:text-white hover:bg-white/10",
-                ].join(" ")}
-              >
-                {l.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Mobile/tablet dropdown groups */}
-          <div className="lg:hidden flex items-center gap-2">
+          {/* Dropdown groups — all devices */}
+          <div className="flex items-center gap-1 md:gap-2">
             {groups.map((g) => {
               const isOpen = openGroup === g.title;
 
@@ -119,22 +95,22 @@ export default function Navbar() {
                     type="button"
                     onClick={() => setOpenGroup(isOpen ? null : g.title)}
                     className={[
-                      "flex items-center gap-1 px-3 py-2 rounded-[10px] text-xs font-semibold transition-all border",
+                      "flex items-center gap-1 px-2 md:px-3 py-2 rounded-[10px] text-[11px] md:text-xs font-semibold transition-all border",
                       isOpen
-                        ? "bg-green-600 text-white border-green-400/20"
+                        ? "bg-green-600 text-white border-green-400/20 shadow-lg shadow-green-500/20"
                         : "bg-white/5 text-white/85 border-white/10 hover:bg-white/10",
                     ].join(" ")}
                     aria-expanded={isOpen}
                     aria-label={`Open ${g.title} menu`}
                   >
                     {g.title}
-                    <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isOpen ? "rotate-180" : ""}`} />
                   </button>
 
                   {isOpen && (
-                    <div className="absolute right-0 mt-2 w-52 rounded-[10px] border border-white/10 bg-[#0b2e19]/95 backdrop-blur-md overflow-hidden shadow-xl">
+                    <div className="absolute right-0 mt-2 w-48 md:w-52 rounded-[10px] border border-white/10 bg-[#04130b] overflow-hidden shadow-xl">
                       <div className="px-4 py-3 border-b border-white/10">
-                        <p className="text-white/80 text-xs font-bold uppercase tracking-[0.12em]">
+                        <p className="text-white/60 text-[10px] md:text-xs font-bold uppercase tracking-[0.12em]">
                           {g.title}
                         </p>
                       </div>

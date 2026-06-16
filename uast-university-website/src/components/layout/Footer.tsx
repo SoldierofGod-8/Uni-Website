@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Facebook, X, Instagram, Youtube } from "./socialIcons";
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
+  { label: "Endowment", href: "/endowment" },
   { label: "Job Opportunities", href: "/news" },
   { label: "Contact Us", href: "/contact" },
   { label: "Visit us", href: "/contact" },
@@ -54,22 +54,19 @@ export default function Footer() {
           {/* Brand column */}
           <div className="space-y-5">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center bg-green-900/30 border border-green-400/20">
-                <Image
+              <div className="w-16 h-16 rounded-full flex items-center justify-center bg-green-900/30 border border-green-400/20 overflow-hidden">
+                <img
                   src="/logo.png"
                   alt="UAST Ihugh"
-                  width={52}
-                  height={52}
-                  className="w-12 h-12 rounded-full"
-                  priority
+                  className="w-full h-full object-cover"
                 />
               </div>
 
               <div className="leading-tight">
                 <p className="text-lg font-semibold">
                   <span className="block">University of</span>
-                  <span className="block">Agriculture, Science</span>
-                  <span className="block">&amp; Technology, Ihugh</span>
+                  <span className="block">Agriculture, Science &amp; Technology,Ihugh</span>
+                  <span className="block"></span>
                 </p>
               </div>
             </div>
@@ -78,7 +75,7 @@ export default function Footer() {
               <p className="text-yellow-300 font-semibold">
                 Takeoff Campus, Ihugh-Korinya Road, Ihugh Vandeikya
               </p>
-              <p className="text-yellow-300 font-semibold">LGA, Benue State</p>
+              <p className="text-yellow-300 font-semibold">Ushongo LGA, Benue State</p>
             </div>
 
             <div className="space-y-3 text-sm">

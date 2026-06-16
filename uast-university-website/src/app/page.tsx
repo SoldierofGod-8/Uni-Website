@@ -56,8 +56,8 @@ This institution is a key initiative of Governor Rev. Fr. Dr. Hyacinth Iormem Al
     },
     {
       title: "Partnerships",
-      value: "Coming Soon",
-      status: "Partnership details will be published when verified",
+      value: "Partner with Us",
+      status: "Partnership Help Desk operational — contact for collaboration opportunities",
       href: "/partnership",
     },
     {
@@ -68,9 +68,9 @@ This institution is a key initiative of Governor Rev. Fr. Dr. Hyacinth Iormem Al
     },
     {
       title: "Endowment Funding",
-      value: "Coming Soon",
-      status: "Endowment funding details will be published when confirmed",
-      href: "/news",
+      value: "Endowment funding details ",
+      status: "	Endowed Chairs, Endowed Fellowships, Named Laboratories, Named Hostels, Named Innovation Centers, Scholarship Endowments ",
+      href: "/endowment"
     },
   ];
 
@@ -102,7 +102,7 @@ This institution is a key initiative of Governor Rev. Fr. Dr. Hyacinth Iormem Al
                 University of Agriculture, Science & Technology, Ihugh
               </p>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                Transformative learning • innovation • community impact
+                Transformative learning • Innovation • Community impact
               </h1>
               <p className="mt-4 text-white/80 leading-relaxed max-w-xl">
                 Specialised in modernising agricultural education, boosting food security, and driving technological innovation.
@@ -251,6 +251,7 @@ This institution is a key initiative of Governor Rev. Fr. Dr. Hyacinth Iormem Al
             ))}
           </div>
         </motion.div>
+
       </section>
     </main>
   );
