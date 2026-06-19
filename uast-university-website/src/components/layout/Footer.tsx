@@ -75,7 +75,7 @@ export default function Footer() {
               <p className="text-yellow-300 font-semibold">
                 Takeoff Campus, Ihugh-Korinya Road, Ihugh Vandeikya
               </p>
-              <p className="text-yellow-300 font-semibold">Ushongo LGA, Benue State</p>
+              <p className="text-yellow-300 font-semibold">Vandeikya LGA, Benue State</p>
             </div>
 
             <div className="space-y-3 text-sm">
