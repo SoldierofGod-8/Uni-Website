@@ -1343,7 +1343,7 @@ export const programmeDetails: ProgrammeDetail[] = [
   {
     slug: "medical-laboratory-technology",
     programmeId: "health-2",
-    name: "B.MLS Medical Laboratory Technology",
+    name: "B.MLS Medical Laboratory Science",
     school: "School of Allied Health Sciences",
     overview:
       "The Medical Laboratory Technology programme at the University of Agriculture, Science and Technology, Ihugh (UAST) consists of a comprehensive undergraduate education in the scientific, technological, diagnostic, and managerial aspects of laboratory medicine, molecular diagnostics, digital health, and laboratory systems innovation. For students in the programme, a core learning objective is building and demonstrating foundational competencies in medical laboratory science, molecular diagnostics, clinical biochemistry, haematology, microbiology, histopathology, immunology, laboratory informatics, biosafety, quality management, and laboratory leadership through the successful completion of rigorous coursework, laboratory investigations, clinical internships, research projects, and a capstone innovation project. Students are also eligible for accelerated professional pathways, including postgraduate research, clinical specialisation, laboratory leadership, and entrepreneurial ventures in diagnostics and biotechnology.",
