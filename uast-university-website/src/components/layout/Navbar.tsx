@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 
@@ -67,11 +68,14 @@ export default function Navbar() {
         <div className="rounded-[10px] bg-white/5 backdrop-blur-md border border-white/10 px-4 py-3 flex items-center justify-between">
           {/* Brand */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center overflow-hidden">
-              <img
+            <div className="w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/10 flex items-center justify-center overflow-hidden relative">
+              <Image
                 src="/logo.png"
                 alt="UAST Ihugh"
-                className="w-full h-full object-cover"
+                width={48}
+                height={48}
+                className="object-cover"
+                priority
               />
             </div>
 
