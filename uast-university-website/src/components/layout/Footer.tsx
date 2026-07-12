@@ -5,7 +5,7 @@ const QUICK_LINKS = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Endowment", href: "/endowment" },
-  { label: "Job Opportunities", href: "/news" },
+  { label: "Job Opportunities", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
   { label: "Visit us", href: "/contact" },
   { label: "All University Departments", href: "/academics" },
@@ -14,7 +14,7 @@ const QUICK_LINKS = [
 const STUDY = [
   { label: "Undergraduate", href: "/programs" },
   { label: "Pre-Degree", href: "/programs" },
-  { label: "International Collaborations", href: "/programs" },
+  { label: "International Collaborations", href: "/endowment" },
   { label: "Short Courses", href: "/programs" },
   { label: "Open Learning", href: "/programs" },
 ];

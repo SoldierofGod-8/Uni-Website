@@ -57,6 +57,7 @@ uast-university-website/
 | Contact | Live |
 | Partnership | Live |
 | Endowment | Live |
+| Careers | Live |
 | Academics | Placeholder |
 | Admissions | Placeholder |
 | Research | Placeholder |
