@@ -54,35 +54,79 @@ export default function AboutPage() {
               <div className="min-w-0">
                 <h2 className="text-2xl font-bold text-white">Vice-Chancellor&apos;s Message</h2>
                 <p className="mt-1 text-green-300 font-semibold">
-                  Prof. Qrisstuberg M. Amua
+                  Prof. Leonard Karshima Shilgba
                 </p>
 
-                <p className="mt-4 text-white/80 whitespace-pre-line leading-relaxed">
-                  The Visitor - UAST
-
-                  {"\n"}Pioneer Vice-Chancellor Prof. Qrisstuberg M. Amua envisions UAST Ihugh
-                  as a &quot;forge for ideas&quot; and a &quot;marketplace for the future&quot;.
-
-                  {"\n\n"}Key initiatives include:
-                  {"\n"}• Practical Transformation: Shifting focus from mere certification to producing
-                  practical solutions for food security and poverty reduction.
-                  {"\n"}• Polymathic Innovation: Fostering entrepreneurship by merging agricultural,
-                  engineering, and technology disciplines.
-                  {"\n"}• Strategic Focus: Built on the pillars of Character, Commitment, and
-                  Competence, with a focus on local community impact, serving as a hub for Benue
-                  and Africa.
-                  {"\n"}• Innovation Support: Utilizing the BSUAST Open Innovation and Startup Incubator
-                  (BOISI) to foster student-led startups.
-
-                  {"\n\n"}This institution is a key initiative of Governor Rev. Fr. Dr. Hyacinth Iormem Alia
-                  to drive digital and agricultural advancement in the region.
-                </p>
-
-                {/* Social placeholders removed from body (Facebook / counters) */}
-                <p className="mt-4 text-white/60 text-sm">
-                  Note: Social widget entries (Facebook/Daylight Reporters, Alia TV Network, etc.) were removed
-                  from the message text for clean readability. They can be added as a separate feed/widget later.
-                </p>
+                <div className="mt-4 text-white/80 space-y-4 leading-relaxed">
+                  <p>
+                    The motto of University of Agriculture, Science and Technology
+                    (UAST)—&apos;Imagine, Aspire, Innovate, Create&apos;—derives naturally from
+                    the expertise and efforts of every member of its academic community
+                    and dedication to service of its owner, the Benue State Government
+                    in Nigeria.
+                  </p>
+                  <p>
+                    At UAST, we believe in the role and significance of entrepreneurship
+                    for personal development, and are aware how much this is important
+                    for the nation&apos;s success. Our prominent and acknowledged faculty
+                    are accessible to mentor and guide you through your studies. Here,
+                    you will be given the support to develop your ideas, knowledge,
+                    skills, and initiatives. Our aim is to help you understand and
+                    prepare for the challenges in the world of agriculture, science,
+                    technology, entrepreneurship, and public life, and how these
+                    challenges can become opportunities for you to become a
+                    problem-solver and benefactor of your community; to help you
+                    develop into the nation&apos;s next generation of leaders and
+                    entrepreneurs, and to assist you to become the driving forces for
+                    shaping tomorrow&apos;s Benue State, Nigeria, Africa, and the world
+                    toward positive transformative impact.
+                  </p>
+                  <p>
+                    UAST supports a modern Nigerian-, European-, and American-inspired
+                    curriculum with emphasis on skills acquisition, industry-readiness
+                    and a must-learn focus on technology and its connectedness to
+                    various fields of human adventure. Small class sizes and a
+                    guaranteed uninterrupted academic calendar enable you to graduate
+                    on schedule. You also have access to options to complete part of
+                    your degree study at partner universities in Europe, the UK,
+                    EURASIA, Russia, as well as the USA.
+                  </p>
+                  <p>
+                    UAST offers a serene campus with areas for recreational and sports
+                    activities. You will enjoy access to state-of-the-art information
+                    technology resources in addition to an exclusive access to
+                    exceptional agriculture, science, allied health, and ICT
+                    laboratories, among others. Modern cafés, restaurants serving
+                    Nigerian and international cuisine, comfortable en-suite hostels,
+                    on-campus well-grassed football field, track and field athletics
+                    facilities, tennis and basketball courts, as well as a health care
+                    centre, are all provided on campus, with expansion undertakings.
+                    UAST supports a Wi-Fi (wireless)-enabled campus, and your security
+                    is guaranteed 24-hours-seven days a week, by well-trained and
+                    equipped UAST Campus Police, Benue State Police and complementary
+                    security architecture.
+                  </p>
+                  <p>
+                    A university should not just be a place that provides textbook-based
+                    education, same as a library is not simply a place where books are
+                    neatly arranged on shelves! We are committed to providing you a
+                    place where you will exchange ideas, views, and experiences with
+                    fellow students, your professors, and many international experts.
+                    At UAST, you will be part of a wider academic community that has its
+                    basis on the common values of honesty, integrity, responsibility,
+                    partnership, respect for diversity, professionalism, open-mindedness,
+                    community involvement and globalisation engagement.
+                  </p>
+                  <p>
+                    My colleagues and I look forward to helping you create your own
+                    unique stories and many meaningful moments at UAST, which you will
+                    be proud of.
+                  </p>
+                  <p>
+                    Once again, you are highly welcome to University of Agriculture,
+                    Science and Technology (UAST), Ihugh, Benue State, Nigeria.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
