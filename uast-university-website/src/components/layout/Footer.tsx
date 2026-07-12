@@ -12,10 +12,9 @@ const QUICK_LINKS = [
 ];
 
 const STUDY = [
-  { label: "Postgraduate", href: "/programs" },
   { label: "Undergraduate", href: "/programs" },
   { label: "Pre-Degree", href: "/programs" },
-  { label: "International Students", href: "/programs" },
+  { label: "International Collaborations", href: "/programs" },
   { label: "Short Courses", href: "/programs" },
   { label: "Open Learning", href: "/programs" },
   { label: "JUPEB", href: "/programs" },
