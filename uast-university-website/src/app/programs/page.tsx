@@ -50,6 +50,7 @@ const schoolsData: School[] = [
       { id: "health-1", name: "B.Sc. Human Nutrition and Dietetics", department: "Dept. of Public Health and Nutrition", slug: "nutrition-and-dietetics" },
       { id: "health-2", name: "B.MLS Medical Laboratory Science", department: "Dept. of Medical Laboratory Science", slug: "medical-laboratory-technology" },
       { id: "health-3", name: "B.NSc. Nursing Science", department: "Dept. of Nursing Science", slug: "nursing-science" },
+      { id: "health-4", name: "B.Sc. Public Health", department: "Dept. of Public Health and Nutrition", slug: "public-health" },
     ],
   },
   {
