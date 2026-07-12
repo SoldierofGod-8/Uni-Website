@@ -17,7 +17,6 @@ const STUDY = [
   { label: "International Collaborations", href: "/programs" },
   { label: "Short Courses", href: "/programs" },
   { label: "Open Learning", href: "/programs" },
-  { label: "JUPEB", href: "/programs" },
 ];
 
 const INFORMATION = [
@@ -72,7 +71,7 @@ export default function Footer() {
 
             <div className="text-[15px] leading-relaxed">
               <p className="text-yellow-300 font-semibold">
-                Takeoff Campus, Ihugh-Korinya Road, Ihugh </p>
+                Takeoff Campus, Ihugh-Korinya Road,</p>
               <p className="text-yellow-300 font-semibold">Vandeikya LGA, Benue State</p>
             </div>
 
