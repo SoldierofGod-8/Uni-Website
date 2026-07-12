@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "University of Agriculture, Science & Technology, Ihugh",
   description: "Official website of University of Agriculture, Science & Technology Ihugh.",
   icons: {
-    icon: "/logo.png",
+    icon: "/Uni-Website/logo.png",
   },
 };
 

@@ -56,7 +56,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 rounded-full flex items-center justify-center bg-green-900/30 border border-green-400/20 overflow-hidden">
                 <img
-                  src="/logo.png"
+                  src="/Uni-Website/logo.png"
                   alt="UAST Ihugh"
                   className="w-full h-full object-cover"
                 />
