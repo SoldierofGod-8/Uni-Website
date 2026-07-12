@@ -186,7 +186,7 @@ export default function Home() {
             <div className="flex-shrink-0 w-full md:w-56 lg:w-64">
               <div className="rounded-[10px] border border-white/10 bg-white/5 overflow-hidden">
                 <img
-                  src="/Uni-Website/Vice_Chancellor.png"
+                  src="/Uni-Website/Vice-Chancellor.jpeg"
                   alt="Prof. Leonard Karshima Shilgba, Vice-Chancellor of UAST Ihugh"
                   className="w-full h-auto object-cover"
                 />
