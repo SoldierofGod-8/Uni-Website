@@ -125,7 +125,7 @@ export const programmeDetails: ProgrammeDetail[] = [
   {
     slug: "agro-economics-and-farm-management",
     programmeId: "agri-2",
-    name: "B.Sc. Agro-Economics and Farm Management",
+    name: "B.Sc. Agricultural Economics and Farm Management",
     school: "School of Agriculture",
     overview:
       "The Agro-Economics and Farm Management programme at the University of Agriculture, Science and Technology, Ihugh (UAST) consists of a comprehensive undergraduate education in the economic, financial, managerial, and technological dimensions of agricultural production, farm enterprise development, agribusiness management, and food systems. For students in the programme, a core learning objective is building and demonstrating foundational competencies in agricultural economics, farm business management, agricultural finance, commodity market analysis, policy evaluation, data analytics, and sustainable enterprise development through the successful completion of rigorous coursework, field investigations, business simulations, and a capstone professional integration project. Students are also eligible for accelerated professional pathways, including postgraduate research, industry leadership, consultancy practice, and entrepreneurial ventures in the agricultural sector.",
@@ -838,7 +838,7 @@ export const programmeDetails: ProgrammeDetail[] = [
   {
     slug: "forest-resources-and-wildlife-management",
     programmeId: "agri-6",
-    name: "B.Sc. Forest Resources and Wildlife Management",
+    name: "B.Sc. Forestry Resources and Wildlife Management",
     school: "School of Agriculture",
     overview:
       "The Forest Resources and Wildlife Management programme at the University of Agriculture, Science and Technology, Ihugh (UAST) consists of a comprehensive undergraduate education in the sustainable management of forest ecosystems, biodiversity conservation, wildlife ecology, and natural resource governance. For students in the programme, a core learning objective is building and demonstrating foundational competencies in sustainable forestry, wildlife conservation, ecosystem restoration, biodiversity assessment, geospatial technologies, and environmental governance through the successful completion of rigorous coursework, field investigations, laboratory analyses, and a capstone professional project. Students are also eligible for accelerated professional pathways, including postgraduate research, conservation leadership, and entrepreneurial ventures in the green economy.",
@@ -1278,7 +1278,7 @@ export const programmeDetails: ProgrammeDetail[] = [
   {
     slug: "nutrition-and-dietetics",
     programmeId: "health-1",
-    name: "B.Sc. Nutrition and Dietetics",
+    name: "B.Sc. Human Nutrition and Dietetics",
     school: "School of Allied Health Sciences",
     overview:
       "The Nutrition and Dietetics programme at the University of Agriculture, Science and Technology, Ihugh (UAST) consists of a comprehensive undergraduate education in the scientific, clinical, technological, agricultural, and entrepreneurial dimensions of human nutrition, dietetic practice, food systems, and sustainable development. For students in the programme, a core learning objective is building and demonstrating foundational competencies in nutrition science, clinical dietetics, community nutrition, food systems analysis, precision nutrition, artificial intelligence applications in nutrition, nutrition informatics, food product innovation, and sustainable food systems through the successful completion of rigorous coursework, laboratory investigations, clinical placements, industry internships, and a capstone innovation project. Students are also eligible for accelerated professional pathways, including postgraduate research, clinical specialisation, food industry leadership, public health nutrition, and entrepreneurial ventures in nutrition and food systems.",

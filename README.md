@@ -39,7 +39,7 @@ uast-university-website/
 
 ## Features
 
-- **Interactive Programme Explorer** — Browse 34 pioneer programmes across 4 schools with search and filtering
+- **Interactive Programme Explorer** — Browse 20 pioneer programmes across 4 schools with search and filtering
 - **3D Animated Logo** — Rotating globe with university branding and energy ring animations
 - **Glassmorphism UI** — Dark theme with translucent cards and green accents
 - **Animated Transitions** — Scroll-reveal and page entrance animations via Framer Motion

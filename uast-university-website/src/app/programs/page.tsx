@@ -8,6 +8,7 @@ import PageShell from "@/components/layout/pageShell";
 type Programme = {
   id: string;
   name: string;
+  department: string;
   slug?: string;
 };
 
@@ -22,46 +23,44 @@ const schoolsData: School[] = [
     id: "school-agri",
     name: "School of Agriculture",
     programmes: [
-      { id: "agri-1", name: "B.Sc. Food Science and Technology", slug: "food-science-and-technology" },
-      { id: "agri-2", name: "B.Sc. Agro-Economics and Farm Management", slug: "agro-economics-and-farm-management" },
-      { id: "agri-3", name: "B.Sc. Agricultural Extension and Rural Sociology", slug: "agricultural-extension-and-rural-sociology" },
-      { id: "agri-4", name: "B.Sc. Agribusiness", slug: "agribusiness" },
-      { id: "agri-5", name: "B.Sc. Fisheries and Aquaculture" },
-      { id: "agri-6", name: "B.Sc. Forest Resources and Wildlife Management", slug: "forest-resources-and-wildlife-management" },
-      { id: "agri-7", name: "B.Sc. Water Resources Management and Agro-Meteorology", slug: "water-resources-management-and-agro-meteorology" },
+      { id: "agri-1", name: "B.Sc. Food Science and Technology", department: "Dept. of Food Science and Technology", slug: "food-science-and-technology" },
+      { id: "agri-2", name: "B.Sc. Agricultural Economics and Farm Management", department: "Dept. of Agricultural Economics and Farm Management", slug: "agro-economics-and-farm-management" },
+      { id: "agri-3", name: "B.Sc. Agricultural Extension and Rural Sociology", department: "Dept. of Agricultural Extension and Rural Sociology", slug: "agricultural-extension-and-rural-sociology" },
+      { id: "agri-4", name: "B.Sc. Agribusiness", department: "Dept. of Agribusiness", slug: "agribusiness" },
+      { id: "agri-5", name: "B.Sc. Forestry Resources and Wildlife Management", department: "Dept. of Forestry Resources and Wildlife Management", slug: "forest-resources-and-wildlife-management" },
+      { id: "agri-6", name: "B.Sc. Water Resources Management and Agro-Meteorology", department: "Dept. of Water Resources Management and Agro-Meteorology", slug: "water-resources-management-and-agro-meteorology" },
     ],
   },
   {
     id: "school-scitech",
     name: "School of Science and Technology",
     programmes: [
-      { id: "sci-1", name: "B.Sc. Industrial Mathematics", slug: "industrial-mathematics" },
-      { id: "sci-2", name: "B.Sc. Industrial Physics", slug: "industrial-physics" },
-      { id: "sci-3", name: "B.Sc. Industrial Chemistry", slug: "industrial-chemistry" },
-      { id: "sci-4", name: "B.Sc. Microbiology", slug: "microbiology" },
-      { id: "sci-5", name: "B.Sc. Environmental Management and Toxicology", slug: "environmental-management-and-toxicology" },
-      { id: "sci-6", name: "B.Sc. Biotechnology" },
-      { id: "sci-7", name: "B.Sc. Geology and Mining", slug: "geology-and-mining" },
+      { id: "sci-1", name: "B.Sc. Industrial Mathematics", department: "Dept. of Industrial Mathematics", slug: "industrial-mathematics" },
+      { id: "sci-2", name: "B.Sc. Industrial Physics", department: "Dept. of Industrial Physics", slug: "industrial-physics" },
+      { id: "sci-3", name: "B.Sc. Industrial Chemistry", department: "Dept. of Industrial Chemistry", slug: "industrial-chemistry" },
+      { id: "sci-4", name: "B.Sc. Microbiology", department: "Dept. of Microbiology", slug: "microbiology" },
+      { id: "sci-5", name: "B.Sc. Environmental Management and Toxicology", department: "Dept. of Environmental Management and Toxicology", slug: "environmental-management-and-toxicology" },
+      { id: "sci-7", name: "B.Sc. Geology and Mining", department: "Dept. of Geology and Mining", slug: "geology-and-mining" },
     ],
   },
   {
     id: "school-health",
     name: "School of Allied Health Sciences",
     programmes: [
-      { id: "health-1", name: "B.Sc. Nutrition and Dietetics", slug: "nutrition-and-dietetics" },
-      { id: "health-2", name: "B.MLS Medical Laboratory Technology", slug: "medical-laboratory-technology" },
-      { id: "health-3", name: "B.NSc. Nursing Science", slug: "nursing-science" },
+      { id: "health-1", name: "B.Sc. Human Nutrition and Dietetics", department: "Dept. of Human Nutrition and Dietetics", slug: "nutrition-and-dietetics" },
+      { id: "health-2", name: "B.MLS Medical Laboratory Technology", department: "Dept. of Medical Laboratory Technology", slug: "medical-laboratory-technology" },
+      { id: "health-3", name: "B.NSc. Nursing Science", department: "Dept. of Nursing Science", slug: "nursing-science" },
     ],
   },
   {
     id: "school-computing",
     name: "School of Computing",
     programmes: [
-      { id: "comp-1", name: "B.Sc. Computer Science", slug: "computer-science" },
-      { id: "comp-2", name: "B.Sc. Data Science", slug: "data-science" },
-      { id: "comp-3", name: "B.Sc. Software Engineering", slug: "software-engineering" },
-      { id: "comp-4", name: "B.Sc. Cyber Security", slug: "cyber-security" },
-      { id: "comp-5", name: "B.Sc. Information and Communication Technology", slug: "information-and-communication-technology" },
+      { id: "comp-1", name: "B.Sc. Computer Science", department: "Dept. of Computer Science", slug: "computer-science" },
+      { id: "comp-2", name: "B.Sc. Data Science", department: "Dept. of Data Science", slug: "data-science" },
+      { id: "comp-3", name: "B.Sc. Software Engineering", department: "Dept. of Software Engineering", slug: "software-engineering" },
+      { id: "comp-4", name: "B.Sc. Cyber Security", department: "Dept. of Cyber Security", slug: "cyber-security" },
+      { id: "comp-5", name: "B.Sc. Information and Communication Technology", department: "Dept. of Information and Communication Technology", slug: "information-and-communication-technology" },
     ],
   },
 ];
@@ -211,6 +210,9 @@ export default function ProgrammesPage() {
                     const CardContent = (
                       <>
                         <div>
+                          <p className="text-xs text-green-400/80 font-semibold uppercase tracking-wide mb-1">
+                            {p.department}
+                          </p>
                           <h3 className="text-lg font-bold text-white">{p.name}</h3>
                           <p className="mt-2 text-sm text-white/70 leading-relaxed">
                             {p.slug
