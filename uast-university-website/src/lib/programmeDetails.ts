@@ -835,6 +835,26 @@ export const programmeDetails: ProgrammeDetail[] = [
   },
 ];
 
+export const institutionLinks: Record<string, string> = {
+  "Harvard T.H. Chan School of Public Health": "https://www.hsph.harvard.edu/",
+  "Johns Hopkins Bloomberg School of Public Health": "https://publichealth.jhu.edu/",
+  "University of California-Davis": "https://www.ucdavis.edu/",
+  "Wageningen University & Research": "https://www.wur.nl/en.htm",
+  "Imperial College London": "https://www.imperial.ac.uk/",
+  "University of Queensland": "https://www.uq.edu.au/",
+  "Cornell University": "https://www.cornell.edu/",
+  "University of Reading": "https://www.reading.ac.uk/",
+  "Massachusetts Institute of Technology": "https://www.mit.edu/",
+  "Stanford University": "https://www.stanford.edu/",
+  "Carnegie Mellon University": "https://www.cmu.edu/",
+  "ETH Zurich": "https://ethz.ch/en.html",
+  "National University of Singapore": "https://www.nus.edu.sg/",
+  "Purdue University": "https://www.purdue.edu/",
+  "Royal Holloway University of London": "https://www.royalholloway.ac.uk/",
+  "University of Oxford": "https://www.ox.ac.uk/",
+  "National Universities Commission": "https://nuc.edu.ng/",
+};
+
 export function getProgrammeDetailBySlug(slug: string): ProgrammeDetail | undefined {
   return programmeDetails.find((p) => p.slug === slug);
 }

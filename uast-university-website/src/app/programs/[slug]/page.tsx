@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getProgrammeDetailBySlug, getProgrammeSlugs, type FastTrackItem } from "@/lib/programmeDetails";
 import PageShell from "@/components/layout/pageShell";
 import BackToProgrammes from "./BackToProgrammes";
+import LinkedText from "./LinkedText";
 
 export function generateStaticParams() {
   return getProgrammeSlugs().map((slug) => ({ slug }));
@@ -73,7 +74,7 @@ export default async function ProgrammeDetailPage({
             {detail.distinctiveness.map((item) => (
               <div key={item.heading}>
                 <h3 className="text-lg font-bold text-green-300 mb-2">{item.heading}</h3>
-                <p className="text-white/80 leading-relaxed">{item.body}</p>
+                <p className="text-white/80 leading-relaxed"><LinkedText text={item.body} /></p>
               </div>
             ))}
           </div>
