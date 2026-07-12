@@ -8,6 +8,7 @@ import PageShell from "@/components/layout/pageShell";
 type Programme = {
   id: string;
   name: string;
+  slug?: string;
 };
 
 type School = {
@@ -22,17 +23,12 @@ const schoolsData: School[] = [
     name: "School of Agriculture",
     programmes: [
       { id: "agri-1", name: "B.Sc. Food Science and Technology" },
-      { id: "agri-2", name: "B.Sc. Soil Science" },
-      { id: "agri-3", name: "B.Sc. Agricultural Economics and Farm Management" },
-      { id: "agri-4", name: "B.Sc. Agricultural Extension and Rural Sociology" },
-      { id: "agri-5", name: "B.Sc. Agribusiness" },
-      { id: "agri-6", name: "B.Sc. Crop Science" },
-      { id: "agri-7", name: "B.Sc. Animal Science" },
-      { id: "agri-8", name: "B.Sc. Family and Consumer Science" },
-      { id: "agri-9", name: "B.Sc. Horticulture and Landscape Management" },
-      { id: "agri-10", name: "B.Sc. Fisheries and Aquaculture" },
-      { id: "agri-11", name: "B.Sc. Forestry Resources and Wildlife Management" },
-      { id: "agri-12", name: "B.Sc. Water Resources Management and Agro-Meteorology" },
+      { id: "agri-2", name: "B.Sc. Agricultural Economics and Farm Management" },
+      { id: "agri-3", name: "B.Sc. Agricultural Extension and Rural Sociology" },
+      { id: "agri-4", name: "B.Sc. Agribusiness" },
+      { id: "agri-5", name: "B.Sc. Fisheries and Aquaculture" },
+      { id: "agri-6", name: "B.Sc. Forest Resources and Wildlife Management" },
+      { id: "agri-7", name: "B.Sc. Water Resources Management and Agro-Meteorology" },
     ],
   },
   {
@@ -43,12 +39,9 @@ const schoolsData: School[] = [
       { id: "sci-2", name: "B.Sc. Industrial Physics" },
       { id: "sci-3", name: "B.Sc. Industrial Chemistry" },
       { id: "sci-4", name: "B.Sc. Microbiology" },
-      { id: "sci-5", name: "B.Sc. Environmental Management and Toxicology" },
+      { id: "sci-5", name: "B.Sc. Environmental Management and Toxicology", slug: "environmental-management-and-toxicology" },
       { id: "sci-6", name: "B.Sc. Biotechnology" },
-      { id: "sci-7", name: "B.Sc. Medicinal Chemistry" },
-      { id: "sci-8", name: "B.Sc. Biochemistry" },
-      { id: "sci-9", name: "B.Sc. Geology and Mining" },
-      { id: "sci-10", name: "B.Sc. Zoology" },
+      { id: "sci-7", name: "B.Sc. Geology and Mining" },
     ],
   },
   {
@@ -58,8 +51,6 @@ const schoolsData: School[] = [
       { id: "health-1", name: "B.Sc. Human Nutrition and Dietetics" },
       { id: "health-2", name: "B.MLS Medical Laboratory Technology" },
       { id: "health-3", name: "B.NSc. Nursing Science" },
-      { id: "health-4", name: "B.Sc. Public Health" },
-      { id: "health-5", name: "B.Sc. Complementary and Alternative Medicine" },
     ],
   },
   {
@@ -71,8 +62,6 @@ const schoolsData: School[] = [
       { id: "comp-3", name: "B.Sc. Software Engineering" },
       { id: "comp-4", name: "B.Sc. Cyber Security" },
       { id: "comp-5", name: "B.Sc. Information and Communication Technology" },
-      { id: "comp-6", name: "B.Sc. Information Systems" },
-      { id: "comp-7", name: "B.Sc. Information Technology" },
     ],
   },
 ];
@@ -218,31 +207,54 @@ export default function ProgrammesPage() {
                   transition={{ duration: 0.25 }}
                   className="grid grid-cols-1 md:grid-cols-2 gap-4"
                 >
-                  {filteredProgrammes.map((p) => (
-                    <div
-                      key={p.id}
-                      className="rounded-[10px] border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition-colors"
-                    >
-                      <div>
-                        <h3 className="text-lg font-bold text-white">{p.name}</h3>
-                        <p className="mt-2 text-sm text-white/70 leading-relaxed">
-                          Pioneer programme — additional details will be published
-                          as they become available.
-                        </p>
+                  {filteredProgrammes.map((p) => {
+                    const CardContent = (
+                      <>
+                        <div>
+                          <h3 className="text-lg font-bold text-white">{p.name}</h3>
+                          <p className="mt-2 text-sm text-white/70 leading-relaxed">
+                            {p.slug
+                              ? "Click to view full programme details."
+                              : "Pioneer programme — additional details will be published as they become available."}
+                          </p>
+                        </div>
+                        <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border bg-green-600/20 border-green-500/30 text-green-200">
+                            Pioneer Programme
+                          </span>
+                          {p.slug ? (
+                            <span className="inline-flex items-center gap-2 rounded-[10px] bg-green-600 hover:bg-green-500 text-white px-4 py-2 text-sm font-semibold transition-all">
+                              View details <span aria-hidden>→</span>
+                            </span>
+                          ) : (
+                            <Link
+                              href="/admissions"
+                              className="inline-flex items-center gap-2 rounded-[10px] bg-green-600 hover:bg-green-500 text-white px-4 py-2 text-sm font-semibold transition-all"
+                            >
+                              Admissions info <span aria-hidden>→</span>
+                            </Link>
+                          )}
+                        </div>
+                      </>
+                    );
+
+                    return p.slug ? (
+                      <Link
+                        key={p.id}
+                        href={`/programs/${p.slug}`}
+                        className="rounded-[10px] border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition-colors block"
+                      >
+                        {CardContent}
+                      </Link>
+                    ) : (
+                      <div
+                        key={p.id}
+                        className="rounded-[10px] border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition-colors"
+                      >
+                        {CardContent}
                       </div>
-                      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border bg-green-600/20 border-green-500/30 text-green-200">
-                          Pioneer Programme
-                        </span>
-                        <Link
-                          href="/admissions"
-                          className="inline-flex items-center gap-2 rounded-[10px] bg-green-600 hover:bg-green-500 text-white px-4 py-2 text-sm font-semibold transition-all"
-                        >
-                          Admissions info <span aria-hidden>→</span>
-                        </Link>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </motion.div>
               </AnimatePresence>
 
