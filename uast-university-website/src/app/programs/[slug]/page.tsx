@@ -1,11 +1,37 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getProgrammeDetailBySlug, getProgrammeSlugs } from "@/lib/programmeDetails";
+import { getProgrammeDetailBySlug, getProgrammeSlugs, type FastTrackItem } from "@/lib/programmeDetails";
 import PageShell from "@/components/layout/pageShell";
 import BackToProgrammes from "./BackToProgrammes";
 
 export function generateStaticParams() {
   return getProgrammeSlugs().map((slug) => ({ slug }));
+}
+
+function FastTrackSection({ fastTrack }: { fastTrack: string | FastTrackItem[] }) {
+  if (typeof fastTrack === "string") {
+    return <p className="text-white/80 leading-relaxed">{fastTrack}</p>;
+  }
+
+  return (
+    <div className="space-y-5">
+      {fastTrack.map((item, i) => (
+        <div key={i}>
+          {item.heading && (
+            <h3 className="font-bold text-green-300 mb-2">{item.heading}</h3>
+          )}
+          <ul className="space-y-2 pl-1">
+            {item.items.map((text) => (
+              <li key={text} className="flex items-start gap-3 text-white/80 text-sm">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-green-500/70 shrink-0" />
+                {text}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default async function ProgrammeDetailPage({
@@ -17,6 +43,9 @@ export default async function ProgrammeDetailPage({
   const detail = getProgrammeDetailBySlug(slug);
 
   if (!detail) return notFound();
+
+  const yearCount = detail.structure.length;
+  const yearLabel = yearCount === 4 ? "four academic years (100–400 Levels)" : "five academic years (100–500 Levels)";
 
   return (
     <div className="min-h-screen bg-[#04130b] text-white">
@@ -68,8 +97,7 @@ export default async function ProgrammeDetailPage({
         <section className="mt-6 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8">
           <h2 className="text-2xl font-bold mb-2">Programme Structure</h2>
           <p className="text-white/70 mb-6">
-            The programme is delivered over five academic years (100–500 Levels) and comprises 43 credit
-            units of UAST proprietary courses complementing the NUC 70% core curriculum.
+            The programme is delivered over {yearLabel} and comprises UAST proprietary courses complementing the NUC 70% core curriculum.
           </p>
           <div className="space-y-6">
             {detail.structure.map((yr) => (
@@ -94,7 +122,7 @@ export default async function ProgrammeDetailPage({
         <section className="mt-6 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8">
           <h2 className="text-2xl font-bold mb-4">Career Pathways</h2>
           <p className="text-white/70 mb-4">
-            UAST Environmental Management and Toxicology graduates are prepared for careers in:
+            UAST {detail.name.replace("B.Sc. ", "")} graduates are prepared for careers in:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {detail.careers.map((c) => (
@@ -111,8 +139,9 @@ export default async function ProgrammeDetailPage({
 
         {/* Fast-Track */}
         <section className="mt-6 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8">
-          <h2 className="text-2xl font-bold mb-4">Fast-Track Options</h2>
-          <p className="text-white/80 leading-relaxed">{detail.fastTrack}</p>
+          <h2 className="text-2xl font-bold mb-4">Fast-Track and Professional Pathways</h2>
+          <p className="text-white/70 mb-4">Qualified students are eligible for accelerated pathways, including:</p>
+          <FastTrackSection fastTrack={detail.fastTrack} />
         </section>
 
         {/* CTA */}
