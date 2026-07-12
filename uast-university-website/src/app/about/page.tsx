@@ -46,12 +46,9 @@ export default function AboutPage() {
 
           {/* VC Message */}
           <div className="mt-8 rounded-[10px] border border-white/10 bg-white/5 p-6 md:p-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center">
-                <span className="text-green-300 font-bold">VC</span>
-              </div>
-
-              <div className="min-w-0">
+            <div className="flex flex-col md:flex-row items-start gap-6">
+              {/* Text */}
+              <div className="flex-1 min-w-0">
                 <h2 className="text-2xl font-bold text-white">Vice-Chancellor&apos;s Message</h2>
                 <p className="mt-1 text-green-300 font-semibold">
                   Prof. Leonard Karshima Shilgba
@@ -126,6 +123,21 @@ export default function AboutPage() {
                     Once again, you are highly welcome to University of Agriculture,
                     Science and Technology (UAST), Ihugh, Benue State, Nigeria.
                   </p>
+                </div>
+              </div>
+
+              {/* VC Image */}
+              <div className="flex-shrink-0 w-full md:w-64 lg:w-72">
+                <div className="rounded-[10px] border border-white/10 bg-white/5 overflow-hidden">
+                  <img
+                    src="/Uni-Website/Vice_Chancellor.png"
+                    alt="Prof. Leonard Karshima Shilgba, Vice-Chancellor of UAST Ihugh"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="p-4 text-center">
+                    <p className="text-white font-semibold text-sm">Prof. Leonard Karshima Shilgba</p>
+                    <p className="text-white/60 text-xs mt-1">Vice-Chancellor</p>
+                  </div>
                 </div>
               </div>
             </div>
