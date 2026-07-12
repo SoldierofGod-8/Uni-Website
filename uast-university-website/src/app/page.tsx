@@ -16,17 +16,14 @@ export default function Home() {
   };
 
   const vcMessage = {
-    name: "Prof. Qrisstuberg M. Amua",
-    text: `The Visitor - UAST
-
-Pioneer Vice-Chancellor Prof. Qrisstuberg M. Amua envisions UAST Ihugh as a "forge for ideas" and a "marketplace for the future". Key initiatives include:
-
-• Practical Transformation: Shifting focus from mere certification to producing practical solutions for food security and poverty reduction.
-• Polymathic Innovation: Fostering entrepreneurship by merging agricultural, engineering, and technology disciplines.
-• Strategic Focus: Built on the pillars of Character, Commitment, and Competence, with a focus on local community impact, serving as a hub for Benue and Africa.
-• Innovation Support: Utilizing the BSUAST Open Innovation and Startup Incubator (BOISI) to foster student-led startups.
-
-This institution is a key initiative of Governor Rev. Fr. Dr. Hyacinth Iormem Alia to drive digital and agricultural advancement in the region.`,
+    name: "Prof. Leonard Karshima Shilgba",
+    paragraphs: [
+      "The motto of University of Agriculture, Science and Technology (UAST)—'Imagine, Aspire, Innovate, Create'—derives naturally from the expertise and efforts of every member of its academic community and dedication to service of its owner, the Benue State Government in Nigeria.",
+      "At UAST, we believe in the role and significance of entrepreneurship for personal development, and are aware how much this is important for the nation's success. Our prominent and acknowledged faculty are accessible to mentor and guide you through your studies. Here, you will be given the support to develop your ideas, knowledge, skills, and initiatives. Our aim is to help you understand and prepare for the challenges in the world of agriculture, science, technology, entrepreneurship, and public life, and how these challenges can become opportunities for you to become a problem-solver and benefactor of your community; to help you develop into the nation's next generation of leaders and entrepreneurs, and to assist you to become the driving forces for shaping tomorrow's Benue State, Nigeria, Africa, and the world toward positive transformative impact.",
+      "UAST supports a modern Nigerian-, European-, and American-inspired curriculum with emphasis on skills acquisition, industry-readiness and a must-learn focus on technology and its connectedness to various fields of human adventure. Small class sizes and a guaranteed uninterrupted academic calendar enable you to graduate on schedule. You also have access to options to complete part of your degree study at partner universities in Europe, the UK, EURASIA, Russia, as well as the USA.",
+      "A university should not just be a place that provides textbook-based education, same as a library is not simply a place where books are neatly arranged on shelves! We are committed to providing you a place where you will exchange ideas, views, and experiences with fellow students, your professors, and many international experts. At UAST, you will be part of a wider academic community that has its basis on the common values of honesty, integrity, responsibility, partnership, respect for diversity, professionalism, open-mindedness, community involvement and globalisation engagement.",
+      "My colleagues and I look forward to helping you create your own unique stories and many meaningful moments at UAST, which you will be proud of. Once again, you are highly welcome to University of Agriculture, Science and Technology (UAST), Ihugh, Benue State, Nigeria.",
+    ],
   };
 
   const announcements = [
@@ -173,15 +170,31 @@ This institution is a key initiative of Governor Rev. Fr. Dr. Hyacinth Iormem Al
           transition={{ duration: 0.6, delay: 0.08 }}
           className="mt-8 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8"
         >
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center">
-              <span className="text-green-300 font-bold">VC</span>
+          <div className="flex flex-col md:flex-row items-start gap-6">
+            {/* Text */}
+            <div className="flex-1 min-w-0">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">Vice-Chancellor&apos;s Message</h2>
+              <p className="text-green-300 font-semibold mb-4">{vcMessage.name}</p>
+              <div className="text-white/80 space-y-4 leading-relaxed">
+                {vcMessage.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
             </div>
 
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">Vice-Chancellor’s Message</h2>
-              <p className="text-green-300 font-semibold mb-4">{vcMessage.name}</p>
-              <p className="whitespace-pre-line text-white/80 leading-relaxed">{vcMessage.text}</p>
+            {/* VC Image */}
+            <div className="flex-shrink-0 w-full md:w-56 lg:w-64">
+              <div className="rounded-[10px] border border-white/10 bg-white/5 overflow-hidden">
+                <img
+                  src="/Uni-Website/Vice_Chancellor.png"
+                  alt="Prof. Leonard Karshima Shilgba, Vice-Chancellor of UAST Ihugh"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="p-4 text-center">
+                  <p className="text-white font-semibold text-sm">Prof. Leonard Karshima Shilgba</p>
+                  <p className="text-white/60 text-xs mt-1">Vice-Chancellor</p>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
