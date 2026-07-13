@@ -146,24 +146,14 @@ export default function AboutPage() {
         {/* ── UAST STIP ── */}
         <div id="stip" className="mt-12 scroll-mt-24">
 
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-[10px] bg-green-600/20 border border-green-500/30 px-4 py-2">
-            <span className="inline-block h-2 w-2 rounded-full bg-green-300" />
-            <span className="text-green-200 font-semibold text-sm">INNOVATION PARK</span>
-          </div>
-
-          {/* Hero Image — directly under badge */}
-          <div className="mt-6 rounded-[10px] border border-white/10 overflow-hidden">
-            <img
-              src="/Uni-Website/labs-hero.png"
-              alt="UAST Science and Technology Innovation Park"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-
           {/* Section Header */}
-          <div className="mt-6 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <div className="mt-8 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8">
+            <div className="inline-flex items-center gap-2 rounded-[10px] bg-green-600/20 border border-green-500/30 px-4 py-2">
+              <span className="inline-block h-2 w-2 rounded-full bg-green-300" />
+              <span className="text-green-200 font-semibold text-sm">INNOVATION PARK</span>
+            </div>
+
+            <h2 className="mt-6 text-3xl md:text-4xl font-bold text-white">
               UAST STIP (Science and Technology Innovation Park)
             </h2>
 
@@ -180,6 +170,15 @@ export default function AboutPage() {
               challenges in agriculture, science, engineering, computing, health sciences,
               environmental management, renewable energy, and applied mathematics.
             </p>
+          </div>
+
+          {/* Hero Image — under the description */}
+          <div className="mt-6 rounded-[10px] border border-white/10 overflow-hidden">
+            <img
+              src="/Uni-Website/labs-hero.png"
+              alt="UAST Science and Technology Innovation Park"
+              className="w-full h-auto object-cover"
+            />
           </div>
 
           {/* The 8 Innovation Centres */}
