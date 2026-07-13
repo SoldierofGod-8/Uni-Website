@@ -148,7 +148,7 @@ export default function EndowmentPage() {
           <img
             src="/Uni-Website/Endowment.jpg"
             alt="UAST Endowment"
-            className="w-full h-auto object-cover max-h-[400px]"
+            className="w-full h-auto object-cover"
           />
         </motion.div>
 
