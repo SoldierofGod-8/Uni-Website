@@ -145,14 +145,7 @@ export default function AboutPage() {
 
         {/* ── UAST STIP ── */}
         <div id="stip" className="mt-12 scroll-mt-24">
-          {/* Hero Image */}
-          <div className="rounded-[10px] border border-white/10 overflow-hidden">
-            <img
-              src="/Uni-Website/labs-hero.png"
-              alt="UAST Science and Technology Innovation Park"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+          
 
           {/* Section Header */}
           <div className="mt-8 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8">
@@ -178,14 +171,15 @@ export default function AboutPage() {
               challenges in agriculture, science, engineering, computing, health sciences,
               environmental management, renewable energy, and applied mathematics.
             </p>
-
-            <p className="mt-3 text-white/60 text-sm max-w-3xl leading-relaxed">
-              Proposed building: Ground Floor 1,887 m&sup2; + First Floor 1,887 m&sup2; = Total
-              3,774 m&sup2;. Housing 8 large laboratories (200 seating capacity each), 16
-              operational offices, seminar areas, and technical rooms.
-            </p>
+           {/* Hero Image */}
+          <div className="rounded-[10px] border border-white/10 overflow-hidden">
+            <img
+              src="/Uni-Website/labs-hero.png"
+              alt="UAST Science and Technology Innovation Park"
+              className="w-full h-auto object-cover"
+            />
           </div>
-
+          </div>
           {/* The 8 Innovation Centres */}
           <div className="mt-6">
             <h3 className="text-2xl font-bold text-white mb-4">The 8 Innovation Centres</h3>
