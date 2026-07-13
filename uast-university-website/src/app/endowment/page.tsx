@@ -3,6 +3,16 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import PageShell from "@/components/layout/pageShell";
+import {
+  GraduationCap,
+  BookOpen,
+  FlaskConical,
+  Building2,
+  Landmark,
+  HandCoins,
+  TrendingUp,
+  Target,
+} from "lucide-react";
 
 const endowedChairs = [
   "Chair in Data Science",
@@ -128,6 +138,20 @@ export default function EndowmentPage() {
           </p>
         </motion.div>
 
+        {/* Hero Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-8 rounded-[10px] border border-white/10 overflow-hidden"
+        >
+          <img
+            src="/Uni-Website/Endowment.jpg"
+            alt="UAST Endowment"
+            className="w-full h-auto object-cover max-h-[400px]"
+          />
+        </motion.div>
+
         {/* ── How It Works ── */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -138,7 +162,7 @@ export default function EndowmentPage() {
         >
           <div className="rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 text-center">
             <div className="w-14 h-14 mx-auto rounded-full bg-green-600/20 border border-green-500/30 flex items-center justify-center">
-              <span className="text-2xl">💰</span>
+              <HandCoins className="w-6 h-6 text-green-300" />
             </div>
             <h3 className="mt-4 text-white font-semibold">1. Give</h3>
             <p className="mt-2 text-white/70 text-sm leading-relaxed">
@@ -148,7 +172,7 @@ export default function EndowmentPage() {
 
           <div className="rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 text-center">
             <div className="w-14 h-14 mx-auto rounded-full bg-green-600/20 border border-green-500/30 flex items-center justify-center">
-              <span className="text-2xl">📈</span>
+              <TrendingUp className="w-6 h-6 text-green-300" />
             </div>
             <h3 className="mt-4 text-white font-semibold">2. Invest</h3>
             <p className="mt-2 text-white/70 text-sm leading-relaxed">
@@ -159,7 +183,7 @@ export default function EndowmentPage() {
 
           <div className="rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 text-center">
             <div className="w-14 h-14 mx-auto rounded-full bg-green-600/20 border border-green-500/30 flex items-center justify-center">
-              <span className="text-2xl">🎯</span>
+              <Target className="w-6 h-6 text-green-300" />
             </div>
             <h3 className="mt-4 text-white font-semibold">3. Fund</h3>
             <p className="mt-2 text-white/70 text-sm leading-relaxed">
@@ -197,7 +221,7 @@ export default function EndowmentPage() {
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center shrink-0">
-              <span className="text-2xl">🎓</span>
+              <GraduationCap className="w-6 h-6 text-green-300" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Endowed Chairs</h3>
@@ -227,7 +251,7 @@ export default function EndowmentPage() {
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center shrink-0">
-              <span className="text-2xl">📚</span>
+              <BookOpen className="w-6 h-6 text-green-300" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Endowed Scholarships</h3>
@@ -257,7 +281,7 @@ export default function EndowmentPage() {
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center shrink-0">
-              <span className="text-2xl">🔬</span>
+              <FlaskConical className="w-6 h-6 text-green-300" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Endowed Laboratories</h3>
@@ -287,7 +311,7 @@ export default function EndowmentPage() {
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center shrink-0">
-              <span className="text-2xl">💡</span>
+              <Building2 className="w-6 h-6 text-green-300" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Endowed Centers / Institutes</h3>
@@ -316,7 +340,7 @@ export default function EndowmentPage() {
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center shrink-0">
-              <span className="text-2xl">🏗️</span>
+              <Landmark className="w-6 h-6 text-green-300" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-white">Endowed Buildings</h3>

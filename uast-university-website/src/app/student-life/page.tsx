@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageShell from "@/components/layout/pageShell";
+import { Download } from "lucide-react";
 
 export default function StudentLifePage() {
   return (
@@ -40,6 +41,28 @@ export default function StudentLifePage() {
             <p className="mt-3 text-white/70 text-sm leading-relaxed">
               Clubs, societies, seminars, and institutional activities will be listed here when operational data is provided.
             </p>
+          </div>
+
+          {/* Student Handbook Download */}
+          <div className="mt-10 rounded-[10px] border border-green-500/20 bg-gradient-to-br from-green-900/20 to-[#04130b] p-6 md:p-8">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold">Student Handbook</h2>
+                <p className="mt-3 text-white/70 text-sm leading-relaxed max-w-2xl">
+                  Download the official UAST Student Handbook for information on academic
+                  regulations, student rights and responsibilities, campus services, and
+                  everything you need to know as a UAST student.
+                </p>
+              </div>
+              <a
+                href="/Uni-Website/UAST Student HandBook.pdf"
+                download
+                className="inline-flex items-center gap-2 rounded-[10px] bg-green-600 hover:bg-green-500 text-white px-6 py-3 font-semibold transition-all shadow-lg shadow-green-500/20 whitespace-nowrap"
+              >
+                <Download className="w-5 h-5" />
+                Download Handbook
+              </a>
+            </div>
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
