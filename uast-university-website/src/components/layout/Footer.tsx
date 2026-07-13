@@ -5,7 +5,7 @@ const QUICK_LINKS = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Endowment", href: "/endowment" },
-  { label: "Job Opportunities", href: "/careers" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact Us", href: "/contact" },
   { label: "Visit us", href: "/contact" },
   { label: "All University Departments", href: "/academics" },

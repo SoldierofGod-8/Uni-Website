@@ -271,13 +271,14 @@ export default function EndowmentPage() {
           </div>
         </motion.div>
 
-        {/* Endowed Laboratories */}
+        {/* Endowed Laboratories — id="laboratories" for cross-links */}
         <motion.div
+          id="laboratories"
+          className="mt-6 scroll-mt-24 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-6 rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8"
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center shrink-0">
@@ -288,6 +289,12 @@ export default function EndowmentPage() {
               <p className="mt-1 text-white/70 text-sm">
                 Fund equipment, maintenance, and upgrades. Perpetual naming. Below ₦500 million
                 minimum.
+              </p>
+              <p className="mt-2 text-green-300/80 text-xs">
+                Learn more about the 8 Innovation Centres at UAST —{" "}
+                <Link href="/about#stip" className="underline hover:text-green-200 transition-colors">
+                  see the UAST STIP
+                </Link>
               </p>
             </div>
           </div>

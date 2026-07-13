@@ -30,7 +30,7 @@ const MENU_GROUPS = [
       { href: "/staff", label: "Staff" },
       { href: "/partnership", label: "Partnerships" },
       { href: "/endowment", label: "Endowment" },
-      { href: "/careers", label: "Job Opportunities" },
+      { href: "/careers", label: "Careers" },
       { href: "/athletics", label: "Athletics" },
     ],
   },

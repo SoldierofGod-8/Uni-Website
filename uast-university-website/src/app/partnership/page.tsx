@@ -66,6 +66,31 @@ export default function PartnershipPage() {
           academic exchange, joint research, and capacity building.
         </p>
 
+        {/* STIP Banner */}
+        <div className="mt-8 rounded-[10px] border border-green-500/20 bg-gradient-to-br from-green-900/20 to-[#04130b] p-6 md:p-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+            <div className="flex-1">
+              <p className="text-green-300 text-xs font-semibold uppercase tracking-wide">Flagship Opportunity</p>
+              <h2 className="mt-2 text-xl md:text-2xl font-bold text-white">
+                Collaborate on the UAST STIP
+              </h2>
+              <p className="mt-2 text-white/70 text-sm leading-relaxed max-w-2xl">
+                The UAST Science and Technology Innovation Park (STIP) is an integrated
+                ecosystem of 8 innovation centres spanning Digital Agriculture, AI, Renewable
+                Energy, Food Innovation, Cyber Security, Biomedical Sciences, and Earth
+                Resources. We seek partners for laboratory development, joint research,
+                industry collaboration, and capacity building.
+              </p>
+            </div>
+            <Link
+              href="/about#stip"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 text-sm font-semibold transition-all whitespace-nowrap"
+            >
+              Learn about STIP <span aria-hidden>→</span>
+            </Link>
+          </div>
+        </div>
+
         {/* Tabs */}
         <div className="mt-10 flex flex-wrap gap-2 border-b border-white/10 pb-0">
           {tabs.map((tab, i) => (
