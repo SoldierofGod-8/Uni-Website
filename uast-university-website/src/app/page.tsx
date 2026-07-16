@@ -30,46 +30,55 @@ export default function Home() {
 
   const announcements = [
     {
-      title: "Key announcement (Coming soon)",
-      date: "Date to be confirmed",
-      excerpt: "This section will be updated with verified announcements as they are released.",
+      tag: "Athletics",
+      title: "UAST Launches the Nigerian Collegiate Sports League (NCSL)",
+      date: "2025",
+      excerpt:
+        "UAST is spearheading a groundbreaking national initiative in partnership with university vice chancellors and college presidents across Nigeria to establish the first formalised inter-university sports league.",
+      href: "/athletics",
     },
     {
-      title: "Institutional update (Coming soon)",
-      date: "Date to be confirmed",
-      excerpt: "Updates on campus activities, research, and institutional initiatives will appear here.",
+      tag: "Scholarships",
+      title: "Sports Scholarships Now Available for Student-Athletes",
+      date: "2025",
+      excerpt:
+        "Full, partial, and bursary-level sports scholarships are now open to talented student-athletes who demonstrate both sporting excellence and academic promise at UAST.",
+      href: "/athletics",
     },
     {
-      title: "Programmes & admissions update (Coming soon)",
-      date: "Date to be confirmed",
-      excerpt: "Explore official admissions and programme information as they become available.",
+      tag: "Endowment",
+      title: "Sports Endowment Fund Established",
+      date: "2025",
+      excerpt:
+        "Five dedicated endowment funds now support athletics development — from facility construction and coaching excellence to student-athlete scholarships and sports science research.",
+      href: "/endowment/sports",
     },
   ];
 
   const highlights = [
     {
-      title: "Programmes",
-      value: "Phased presentation (Phase 1 available • Phases 2–3 coming)",
-      status: "Operational structure ready — details to be updated",
+      title: "Academic Programmes",
+      value: "21+ Programmes Across 6 Schools",
+      status: "Schools of Agriculture, Science & Technology, Allied Health, Engineering, Computing, and Earth Sciences",
       href: "/programs",
     },
     {
-      title: "Partnerships",
-      value: "Partner with Us",
-      status: "Partnership Help Desk operational — contact for collaboration opportunities",
+      title: "Strategic Partnerships",
+      value: "Global University Partnerships",
+      status: "Collaborations with institutions in China, USA, Netherlands, South Africa, and Thailand for staff exchange, joint research, and curriculum development",
       href: "/partnership",
     },
     {
-      title: "Funding",
-      value: "Coming Soon",
-      status: "Funding information will be updated when operational",
-      href: "/news",
+      title: "NCSL Athletics",
+      value: "Nigerian Collegiate Sports League",
+      status: "UAST-led initiative — inter-university competition, national championships, broadcasting, and career pathways for student-athletes",
+      href: "/athletics",
     },
     {
       title: "Endowment Funding",
-      value: "Endowment funding details ",
-      status: "	Endowed Chairs, Endowed Fellowships, Named Laboratories, Named Hostels, Named Innovation Centers, Scholarship Endowments ",
-      href: "/endowment"
+      value: "7 Endowment Categories",
+      status: "Endowed Chairs, Scholarships, Laboratories, Centres, Buildings, and Sports Development — perpetual naming and professional fund management",
+      href: "/endowment",
     },
   ];
 
@@ -480,14 +489,23 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Key Announcements</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {announcements.map((a) => (
-              <div
+              <Link
                 key={a.title}
-                className="rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors"
+                href={a.href}
+                className="group rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors"
               >
-                <div className="text-xs text-white/60 font-semibold">{a.date}</div>
-                <div className="mt-2 text-white font-semibold leading-snug">{a.title}</div>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="inline-flex items-center rounded-full px-3 py-1 text-[10px] font-bold bg-green-600/20 text-green-200 border border-green-500/30">
+                    {a.tag}
+                  </span>
+                  <span className="text-xs text-white/50">{a.date}</span>
+                </div>
+                <div className="mt-3 text-white font-semibold leading-snug group-hover:text-green-200 transition-colors">{a.title}</div>
                 <p className="mt-3 text-white/70 text-sm leading-relaxed">{a.excerpt}</p>
-              </div>
+                <div className="mt-3 text-green-300 text-xs font-semibold group-hover:text-green-200">
+                  Learn more →
+                </div>
+              </Link>
             ))}
           </div>
 
