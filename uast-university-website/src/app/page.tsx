@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Logo3D from "@/components/3d/Logo3D";
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
+
+const Logo3D = dynamic(() => import("@/components/3d/Logo3D"), { ssr: false });
 
 export default function Home() {
   const vision = {
@@ -188,6 +190,9 @@ export default function Home() {
                 <img
                   src="/Uni-Website/Vice-Chancellor.jpeg"
                   alt="Prof. Leonard Karshima Shilgba, Vice-Chancellor of UAST Ihugh"
+                  width={256}
+                  height={320}
+                  loading="lazy"
                   className="w-full h-auto object-cover"
                 />
                 <div className="p-4 text-center">
@@ -232,6 +237,9 @@ export default function Home() {
             <img
               src="/Uni-Website/labs-hero.png"
               alt="UAST Science and Technology Innovation Park"
+              width={1200}
+              height={630}
+              loading="lazy"
               className="w-full h-auto object-cover"
             />
           </div>
@@ -432,6 +440,9 @@ export default function Home() {
                   <img
                     src="/Uni-Website/Solar-Farm.jpg"
                     alt="UAST Living Laboratory Campus - Solar Farm"
+                    width={384}
+                    height={256}
+                    loading="lazy"
                     className="w-full h-auto object-cover"
                   />
                   <div className="p-4 text-center">

@@ -12,6 +12,7 @@ import {
   HandCoins,
   TrendingUp,
   Target,
+  Trophy,
 } from "lucide-react";
 
 const endowedChairs = [
@@ -148,6 +149,9 @@ export default function EndowmentPage() {
           <img
             src="/Uni-Website/Endowment.jpg"
             alt="UAST Endowment"
+            width={1200}
+            height={630}
+            loading="lazy"
             className="w-full h-auto object-cover"
           />
         </motion.div>
@@ -364,6 +368,35 @@ export default function EndowmentPage() {
                 <span className="text-white/90 text-sm font-semibold">{b}</span>
               </div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Sports Endowment Sub-page Link */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="mt-6 rounded-[10px] border border-green-500/20 bg-gradient-to-br from-green-900/20 to-[#04130b] p-6 md:p-8"
+        >
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+            <div className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center shrink-0">
+              <Trophy className="w-6 h-6 text-green-300" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl font-bold text-white">Sports Endowment Fund</h3>
+              <p className="mt-1 text-white/70 text-sm leading-relaxed">
+                A dedicated endowment for athletics and sports development at UAST —
+                including facility construction, student-athlete scholarships, coaching
+                excellence, sports science research, and competition travel.
+              </p>
+            </div>
+            <Link
+              href="/endowment/sports"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 text-sm font-semibold transition-all shadow-lg shadow-green-500/20 shrink-0"
+            >
+              View Sports Endowment <span aria-hidden>→</span>
+            </Link>
           </div>
         </motion.div>
 

@@ -6,6 +6,15 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import PageShell from "@/components/layout/pageShell";
 
+function sanitize(input: string): string {
+  return input
+    .replace(/[<>]/g, "")
+    .replace(/javascript:/gi, "")
+    .replace(/on\w+=/gi, "")
+    .trim()
+    .slice(0, 2000);
+}
+
 export default function ContactPage() {
   const [form, setForm] = useState({
     fullName: "",
@@ -19,18 +28,22 @@ export default function ContactPage() {
     { type: "idle" | "loading" | "success" | "error"; message?: string }
   >({ type: "idle" });
 
+  const [honeypot, setHoneypot] = useState("");
+
   function update<K extends keyof typeof form>(key: K, value: string) {
-    setForm((prev) => ({ ...prev, [key]: value }));
+    setForm((prev) => ({ ...prev, [key]: sanitize(value) }));
   }
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
 
+    if (honeypot) return;
+
     if (!form.fullName.trim()) {
       setStatus({ type: "error", message: "Please enter your full name." });
       return;
     }
-    if (!form.email.trim() || !form.email.includes("@")) {
+    if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       setStatus({ type: "error", message: "Please enter a valid email address." });
       return;
     }
@@ -110,6 +123,8 @@ export default function ContactPage() {
                     <input
                       value={form.fullName}
                       onChange={(e) => update("fullName", e.target.value)}
+                      maxLength={100}
+                      autoComplete="name"
                       className="mt-2 w-full rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500/50"
                       placeholder="Your name"
                     />
@@ -119,6 +134,9 @@ export default function ContactPage() {
                     <input
                       value={form.email}
                       onChange={(e) => update("email", e.target.value)}
+                      type="email"
+                      maxLength={254}
+                      autoComplete="email"
                       className="mt-2 w-full rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500/50"
                       placeholder="you@example.com"
                     />
@@ -131,6 +149,9 @@ export default function ContactPage() {
                     <input
                       value={form.phone}
                       onChange={(e) => update("phone", e.target.value)}
+                      type="tel"
+                      maxLength={20}
+                      autoComplete="tel"
                       className="mt-2 w-full rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500/50"
                       placeholder="+234..."
                     />
@@ -140,6 +161,7 @@ export default function ContactPage() {
                     <input
                       value={form.subject}
                       onChange={(e) => update("subject", e.target.value)}
+                      maxLength={200}
                       className="mt-2 w-full rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500/50"
                       placeholder="How can we help?"
                     />
@@ -151,7 +173,8 @@ export default function ContactPage() {
                   <textarea
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
-                    className="mt-2 w-full h-32 rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500/50"
+                    maxLength={2000}
+                    className="mt-2 w-full h-32 rounded-[10px] border border-white/10 bg-white/5 px-4 py-3 text-white outline-none focus:border-green-500/50 resize-none"
                     placeholder="Write your message..."
                   />
                 </div>
@@ -169,6 +192,20 @@ export default function ContactPage() {
                     {status.message}
                   </div>
                 )}
+
+                {/* Honeypot — hidden from real users, bots will fill it */}
+                <div className="absolute -left-[9999px] opacity-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+                  <label htmlFor="website">Do not fill this</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                  />
+                </div>
 
                 <button
                   type="submit"

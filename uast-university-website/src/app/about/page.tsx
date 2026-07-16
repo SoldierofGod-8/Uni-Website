@@ -132,6 +132,9 @@ export default function AboutPage() {
                   <img
                     src="/Uni-Website/Vice-Chancellor.jpeg"
                     alt="Prof. Leonard Karshima Shilgba, Vice-Chancellor of UAST Ihugh"
+                    width={256}
+                    height={320}
+                    loading="lazy"
                     className="w-full h-auto object-cover"
                   />
                   <div className="p-4 text-center">
@@ -177,6 +180,9 @@ export default function AboutPage() {
             <img
               src="/Uni-Website/labs-hero.png"
               alt="UAST Science and Technology Innovation Park"
+              width={1200}
+              height={630}
+              loading="lazy"
               className="w-full h-auto object-cover"
             />
           </div>
@@ -378,6 +384,9 @@ export default function AboutPage() {
                   <img
                     src="/Uni-Website/Solar-Farm.jpg"
                     alt="UAST Living Laboratory Campus - Solar Farm"
+                    width={384}
+                    height={256}
+                    loading="lazy"
                     className="w-full h-auto object-cover"
                   />
                   <div className="p-4 text-center">

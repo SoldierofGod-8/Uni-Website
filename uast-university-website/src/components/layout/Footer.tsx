@@ -56,6 +56,8 @@ export default function Footer() {
                 <img
                   src="/Uni-Website/logo.png"
                   alt="UAST Ihugh"
+                  width={64}
+                  height={64}
                   className="w-full h-full object-cover"
                 />
               </div>

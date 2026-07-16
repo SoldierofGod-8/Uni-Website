@@ -16,6 +16,13 @@ const MENU_GROUPS = [
     ],
   },
   {
+    title: "Staff",
+    items: [
+      { href: "/staff", label: "Staff" },
+      { href: "/careers", label: "Careers" },
+    ],
+  },
+  {
     title: "Academics",
     items: [
       { href: "/programs", label: "Programmes" },
@@ -24,13 +31,16 @@ const MENU_GROUPS = [
     ],
   },
   {
-    title: "Campus",
+    title: "Donate and Partner",
+    items: [
+      { href: "/endowment", label: "Endowment" },
+      { href: "/partnership", label: "Partnerships" },
+    ],
+  },
+  {
+    title: "Student Life",
     items: [
       { href: "/student-life", label: "Student Life" },
-      { href: "/staff", label: "Staff" },
-      { href: "/partnership", label: "Partnerships" },
-      { href: "/endowment", label: "Endowment" },
-      { href: "/careers", label: "Careers" },
       { href: "/athletics", label: "Athletics" },
     ],
   },
@@ -72,6 +82,8 @@ export default function Navbar() {
               <img
                 src="/Uni-Website/logo.png"
                 alt="UAST Ihugh"
+                width={48}
+                height={48}
                 className="w-full h-full object-cover"
               />
             </div>
