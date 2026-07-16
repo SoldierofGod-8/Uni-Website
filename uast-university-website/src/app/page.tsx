@@ -58,7 +58,7 @@ export default function Home() {
   const highlights = [
     {
       title: "Academic Programmes",
-      value: "21+ Programmes Across 6 Schools",
+      value: "21+ Programmes Across 4 Schools",
       status: "Schools of Agriculture, Science & Technology, Allied Health, Engineering, Computing, and Earth Sciences",
       href: "/programs",
     },
