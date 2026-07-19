@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import PageShell from "@/components/layout/pageShell";
+import { Download } from "lucide-react";
 
 type Programme = {
   id: string;
@@ -12,16 +13,25 @@ type Programme = {
   slug?: string;
 };
 
+type CurriculumPdf = {
+  filename: string;
+  label: string;
+};
+
 type School = {
   id: string;
   name: string;
   programmes: Programme[];
+  curriculumPdfs: CurriculumPdf[];
 };
 
 const schoolsData: School[] = [
   {
     id: "school-agri",
     name: "School of Agriculture",
+    curriculumPdfs: [
+      { filename: "Agriculture-2023.pdf", label: "NUC CCMAS Curriculum — Agriculture" },
+    ],
     programmes: [
       { id: "agri-1", name: "B.Sc. Food Science and Technology", department: "Dept. of Food Science and Technology", slug: "food-science-and-technology" },
       { id: "agri-2", name: "B.Sc. Agricultural Economics and Farm Management", department: "Dept. of Agricultural Economics and Extension", slug: "agro-economics-and-farm-management" },
@@ -34,6 +44,10 @@ const schoolsData: School[] = [
   {
     id: "school-scitech",
     name: "School of Science and Technology",
+    curriculumPdfs: [
+      { filename: "Sciences-CCMAS-2023-FINAL.pdf", label: "NUC CCMAS Curriculum — Sciences" },
+      { filename: "Environmental-Sciences-CCMAS-2023-FINAL.pdf", label: "NUC CCMAS Curriculum — Environmental Sciences" },
+    ],
     programmes: [
       { id: "sci-1", name: "B.Sc. Industrial Mathematics", department: "Dept. of Mathematical Sciences", slug: "industrial-mathematics" },
       { id: "sci-2", name: "B.Sc. Industrial Physics", department: "Dept. of Physical Sciences", slug: "industrial-physics" },
@@ -46,6 +60,9 @@ const schoolsData: School[] = [
   {
     id: "school-health",
     name: "School of Allied Health Sciences",
+    curriculumPdfs: [
+      { filename: "Allied-Health-Sciences-2023.pdf", label: "NUC CCMAS Curriculum — Allied Health Sciences" },
+    ],
     programmes: [
       { id: "health-1", name: "B.Sc. Human Nutrition and Dietetics", department: "Dept. of Public Health and Nutrition", slug: "nutrition-and-dietetics" },
       { id: "health-2", name: "B.MLS Medical Laboratory Science", department: "Dept. of Medical Laboratory Science", slug: "medical-laboratory-technology" },
@@ -56,6 +73,9 @@ const schoolsData: School[] = [
   {
     id: "school-computing",
     name: "School of Computing",
+    curriculumPdfs: [
+      { filename: "Computing-CCMAS-2023-FINAL.pdf", label: "NUC CCMAS Curriculum — Computing" },
+    ],
     programmes: [
       { id: "comp-1", name: "B.Sc. Computer Science", department: "Dept. of Computer Science", slug: "computer-science" },
       { id: "comp-2", name: "B.Sc. Data Science", department: "Dept. of Software and Data Systems", slug: "data-science" },
@@ -267,6 +287,29 @@ export default function ProgrammesPage() {
                 </div>
               )}
             </div>
+
+            {/* NUC CCMAS Curriculum Downloads */}
+            {selectedSchool.curriculumPdfs.length > 0 && (
+              <div className="mt-6 rounded-[10px] border border-green-500/20 bg-gradient-to-br from-green-900/20 to-[#04130b] p-6">
+                <h3 className="text-lg font-bold">NUC CCMAS Curriculum</h3>
+                <p className="mt-2 text-white/70 text-sm leading-relaxed">
+                  Download the approved NUC Core Curriculum and Minimum Academic Standards for {selectedSchool.name}.
+                </p>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {selectedSchool.curriculumPdfs.map((pdf) => (
+                    <a
+                      key={pdf.filename}
+                      href={`/Uni-Website/${pdf.filename}`}
+                      download
+                      className="inline-flex items-center gap-2 rounded-[10px] bg-green-600 hover:bg-green-500 text-white px-5 py-2.5 text-sm font-semibold transition-all shadow-lg shadow-green-500/20"
+                    >
+                      <Download className="w-4 h-4" />
+                      {pdf.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </PageShell>
