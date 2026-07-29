@@ -414,6 +414,40 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* ── CAMPUS LOCATION ── */}
+        <div className="mt-12 scroll-mt-24">
+          <div className="rounded-[10px] border border-white/10 bg-white/5 backdrop-blur-md p-6 md:p-8">
+            <div className="inline-flex items-center gap-2 rounded-[10px] bg-green-600/20 border border-green-500/30 px-4 py-2">
+              <span className="inline-block h-2 w-2 rounded-full bg-green-300" />
+              <span className="text-green-200 font-semibold text-sm">CAMPUS LOCATION</span>
+            </div>
+
+            <h2 className="mt-6 text-3xl md:text-4xl font-bold text-white">
+              Our Location
+            </h2>
+
+            <p className="mt-4 text-white/80 leading-relaxed max-w-4xl">
+              UAST campuses are located in Ihugh, Vandeikya Local Government Area of Benue
+              State, Nigeria — a town located about 120 kilometers from the famous Obudu
+              Mountain Resort, in Cross Rivers State; 40 kilometers from Gboko town (the
+              headquarters of the Tiv people of Nigeria), where a civil and cargo aviation
+              airstrip is located; and 120 kilometers from Abakaliki, the capital of Ebonyi
+              State.
+            </p>
+
+            <div className="mt-6 rounded-[10px] border border-white/10 overflow-hidden">
+              <img
+                src="/Uni-Website/uast-plans.png"
+                alt="UAST Ihugh Campus Master Plan"
+                width={1200}
+                height={800}
+                loading="lazy"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Next actions */}
         <div className="mt-10 flex flex-wrap gap-4">
             <Link
