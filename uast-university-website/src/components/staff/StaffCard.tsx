@@ -39,7 +39,7 @@ export default function StaffCard({ member }: { member: StaffMember }) {
             </span>
           ) : (
             <span className="w-12 h-12 rounded-[10px] bg-green-600/20 border border-green-500/30 flex items-center justify-center overflow-hidden flex-shrink-0">
-              <Image src="/logo.png" alt="" width={44} height={44} className="w-8 h-8" />
+              <Image src="/Uni-Website/logo.png" alt="" width={44} height={44} className="w-8 h-8" />
             </span>
           )}
 

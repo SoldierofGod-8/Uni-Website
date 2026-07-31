@@ -25,7 +25,7 @@ export const staffMembers: StaffMember[] = [
     name: "Prof. Leonard Karshima Shilgba",
     role: "Substantive Pioneer Vice Chancellor",
     dept: "University of Agriculture, Science and Technology (UAST), Ihugh, Benue State, Nigeria",
-    image: "/Vice-Chancellor.jpeg",
+    image: "/Uni-Website/Vice-Chancellor.jpeg",
     featured: true,
     summary:
       "Professor Leonard Karshima Shilgba is a Nigerian Professor of Mathematics, university administrator, scholar, author, educationist, and academic leader, and the Substantive Pioneer Vice Chancellor of the University of Agriculture, Science and Technology (UAST), Ihugh, Benue State, having been appointed by the Visitor of the University and Executive Governor of Benue State, His Excellency, Rev. Fr. Dr. Hyacinth Iormem Alia.",
@@ -159,7 +159,7 @@ export const staffMembers: StaffMember[] = [
     name: "Dr Johnson Ijale Echor",
     role: "Pioneer Registrar",
     dept: "University of Agriculture, Science and Technology (UAST), Ihugh, Vandeikya, Benue State",
-    image: "/Registrar.png",
+    image: "/Uni-Website/Registrar.png",
     featured: true,
     summary:
       "Dr Johnson Ijale Echor is a Nigerian University Administrator and a Public Administration professional who is currently serving as the Registrar of the University of Agriculture Science and Technology, Ihugh, Vandeikya, in Benue State.",
