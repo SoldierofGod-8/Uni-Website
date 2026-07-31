@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import type { StaffMember } from "@/lib/staff";
 
 export default function StaffCard({ member }: { member: StaffMember }) {
@@ -24,7 +24,7 @@ export default function StaffCard({ member }: { member: StaffMember }) {
         type="button"
         onClick={() => setExpanded((v) => !v)}
         aria-expanded={expanded}
-        className="w-full text-left p-5 md:p-6"
+        className="w-full text-left p-5 md:p-6 pb-3 md:pb-3"
       >
         <span className="flex items-start gap-4">
           {featured && member.image ? (
@@ -70,6 +70,25 @@ export default function StaffCard({ member }: { member: StaffMember }) {
           {member.summary}
         </span>
       </button>
+
+      {member.website && (
+        <div className="px-5 md:px-6 pb-5 md:pb-6">
+          <a
+            href={member.website.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-[10px] border border-green-500/30 bg-green-600/10 text-green-200 px-4 py-2.5 text-sm font-semibold hover:bg-green-600/20 transition-all"
+          >
+            <ExternalLink className="w-4 h-4 flex-shrink-0" />
+            <span>
+              {member.website.note}{" "}
+              <span className="underline underline-offset-2">
+                {member.website.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+              </span>
+            </span>
+          </a>
+        </div>
+      )}
 
       <AnimatePresence initial={false}>
         {expanded && (

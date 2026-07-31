@@ -14,6 +14,7 @@ export type StaffMember = {
   image?: string;
   summary: string;
   featured?: boolean;
+  website?: { url: string; note: string };
   sections?: StaffSection[];
   footerNote?: string;
 };
@@ -28,6 +29,10 @@ export const staffMembers: StaffMember[] = [
     featured: true,
     summary:
       "Professor Leonard Karshima Shilgba is a Nigerian Professor of Mathematics, university administrator, scholar, author, educationist, and academic leader, and the Substantive Pioneer Vice Chancellor of the University of Agriculture, Science and Technology (UAST), Ihugh, Benue State, having been appointed by the Visitor of the University and Executive Governor of Benue State, His Excellency, Rev. Fr. Dr. Hyacinth Iormem Alia.",
+    website: {
+      url: "https://leonardshilgba.com/",
+      note: "More information about Professor Shilgba, alongside his books, can be found on his personal website.",
+    },
     sections: [
       {
         heading: "Academic Background",
