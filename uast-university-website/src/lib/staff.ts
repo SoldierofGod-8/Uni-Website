@@ -23,12 +23,12 @@ export const staffMembers: StaffMember[] = [
   {
     id: "vice-chancellor",
     name: "Prof. Leonard Karshima Shilgba",
-    role: "Visiting Pioneer Vice Chancellor",
+    role: "Acting Vice Chancellor",
     dept: "University of Agriculture, Science and Technology (UAST), Ihugh, Benue State, Nigeria",
     image: "/Uni-Website/Vice-Chancellor.jpeg",
     featured: true,
     summary:
-      "Professor Leonard Karshima Shilgba is a Nigerian Professor of Mathematics, university administrator, scholar, author, educationist, and academic leader, and the Visiting Pioneer Vice Chancellor of the University of Agriculture, Science and Technology (UAST), Ihugh, Benue State, having been appointed by the Visitor of the University and Executive Governor of Benue State, His Excellency, Rev. Fr. Dr. Hyacinth Iormem Alia.",
+      "Professor Leonard Karshima Shilgba is a Nigerian Professor of Mathematics, university administrator, scholar, author, educationist, and academic leader, and the Acting Vice Chancellor of the University of Agriculture, Science and Technology (UAST), Ihugh, Benue State, having been appointed by the Visitor of the University and Executive Governor of Benue State, His Excellency, Rev. Fr. Dr. Hyacinth Iormem Alia.",
     website: {
       links: [
         { url: "https://leonardshilgba.com/", label: "Personal Website" },
@@ -65,7 +65,7 @@ export const staffMembers: StaffMember[] = [
           "Pioneer Vice President for Academic Affairs, February 2019–2023",
           "Director, Academic Planning and Quality Assurance, July 2021–August 2023",
           "Member, Governing Council, from September 2021",
-          "First elected Dean, Faculty of Science, in a two-year tenure preceding his appointment as Visiting Pioneer Vice Chancellor of UAST",
+          "First elected Dean, Faculty of Science, in a two-year tenure preceding his appointment as Acting Vice Chancellor of UAST",
         ],
         afterBullets: [
           "These appointments have given him extensive experience in university governance, academic planning, curriculum development, quality assurance, institutional accreditation, staff development, academic administration and strategic university development.",
@@ -92,18 +92,18 @@ export const staffMembers: StaffMember[] = [
       {
         heading: "Contribution to the Establishment of UAST, Ihugh",
         paragraphs: [
-          "Prior to his appointment as Visiting Pioneer Vice Chancellor, Professor Shilgba was appointed Chairman of the University of Agriculture, Science and Technology, Ihugh Implementation Taskforce by the Governor of Benue State.",
+          "Prior to his appointment as Acting Vice Chancellor, Professor Shilgba was appointed Chairman of the University of Agriculture, Science and Technology, Ihugh Implementation Taskforce by the Governor of Benue State.",
           "In that capacity, he led multidisciplinary work aimed at preparing the University for effective take-off and the development of an institution capable of meeting the educational, scientific, technological and agricultural development needs of Benue State and Nigeria.",
           "His work on UAST has encompassed academic programmes and curriculum development, staffing and human-resource planning, infrastructure and facilities, partnerships and funding, academic quality assurance, institutional systems and strategic planning.",
           "Under the take-off planning process, particular attention has been given to the development of programmes aligned with the National Universities Commission (NUC) Core Curriculum and Minimum Academic Standards (CCMAS), while also developing institution-specific academic content intended to give UAST a distinctive identity.",
           "Professor Shilgba has also been involved in the development of academic recovery and transition arrangements, institutional structures, staffing plans, laboratory requirements, academic calendars and other foundational systems necessary for the emergence of UAST as a credible university.",
-          "His appointment as Visiting Pioneer Vice Chancellor therefore places him in the unique position of moving from the planning and implementation phase into the leadership of the University's full institutional establishment and development.",
+          "His appointment as Acting Vice Chancellor therefore places him in the unique position of moving from the planning and implementation phase into the leadership of the University's full institutional establishment and development.",
         ],
       },
       {
         heading: "Vision for UAST",
         paragraphs: [
-          "As Visiting Pioneer Vice Chancellor, Professor Shilgba is expected to lead the development of UAST as a modern, innovative and development-oriented university with strong foundations in agriculture, science, technology and entrepreneurship.",
+          "As Acting Vice Chancellor, Professor Shilgba is expected to lead the development of UAST as a modern, innovative and development-oriented university with strong foundations in agriculture, science, technology and entrepreneurship.",
           "His academic and administrative philosophy emphasizes quality, innovation, integrity, relevance, interdisciplinarity, employability, research, and community impact.",
           "He believes that a contemporary university should not merely transmit knowledge but should also generate knowledge, solve problems, develop human capacity and contribute directly to the economic and technological transformation of its host community and society.",
           "The emerging vision for UAST places particular emphasis on the integration of agriculture, science, technology, digital innovation, entrepreneurship and sustainable development, with strong links between academic programmes, research and the practical needs of society.",
@@ -135,11 +135,11 @@ export const staffMembers: StaffMember[] = [
         ],
       },
       {
-        heading: "Appointment as Visiting Pioneer Vice Chancellor",
+        heading: "Appointment as Acting Vice Chancellor",
         paragraphs: [
-          "Professor Leonard Karshima Shilgba was appointed Visiting Pioneer Vice Chancellor of the University of Agriculture, Science and Technology, Ihugh, Benue State, by the Visitor of the University and Executive Governor of Benue State, His Excellency, Rev. Fr. Dr. Hyacinth Iormem Alia.",
+          "Professor Leonard Karshima Shilgba was appointed Acting Vice Chancellor of the University of Agriculture, Science and Technology, Ihugh, Benue State, by the Visitor of the University and Executive Governor of Benue State, His Excellency, Rev. Fr. Dr. Hyacinth Iormem Alia.",
           "His appointment brings to the leadership of the young university a scholar with extensive experience in mathematics and scientific research, university teaching, academic planning, quality assurance, curriculum development, university governance, institutional development and higher-education administration.",
-          "As Visiting Pioneer Vice Chancellor, Professor Shilgba assumes responsibility for leading UAST through the critical formative years of its development, with the objective of establishing a strong institutional foundation upon which future generations of students, scholars and researchers can build.",
+          "As Acting Vice Chancellor, Professor Shilgba assumes responsibility for leading UAST through the critical formative years of its development, with the objective of establishing a strong institutional foundation upon which future generations of students, scholars and researchers can build.",
         ],
       },
       {
