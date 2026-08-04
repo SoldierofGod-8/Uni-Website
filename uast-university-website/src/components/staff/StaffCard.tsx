@@ -72,21 +72,24 @@ export default function StaffCard({ member }: { member: StaffMember }) {
       </button>
 
       {member.website && (
-        <div className="px-5 md:px-6 pb-5 md:pb-6">
-          <a
-            href={member.website.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-[10px] border border-green-500/30 bg-green-600/10 text-green-200 px-4 py-2.5 text-sm font-semibold hover:bg-green-600/20 transition-all"
-          >
-            <ExternalLink className="w-4 h-4 flex-shrink-0" />
-            <span>
-              {member.website.note}{" "}
-              <span className="underline underline-offset-2">
-                {member.website.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+        <div className="px-5 md:px-6 pb-5 md:pb-6 flex flex-wrap gap-2">
+          {member.website.links.map((link) => (
+            <a
+              key={link.url}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-[10px] border border-green-500/30 bg-green-600/10 text-green-200 px-4 py-2.5 text-sm font-semibold hover:bg-green-600/20 transition-all"
+            >
+              <ExternalLink className="w-4 h-4 flex-shrink-0" />
+              <span>
+                {link.label}{" "}
+                <span className="underline underline-offset-2">
+                  {link.url.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                </span>
               </span>
-            </span>
-          </a>
+            </a>
+          ))}
         </div>
       )}
 
