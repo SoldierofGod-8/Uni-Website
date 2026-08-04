@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div className="flex flex-col md:flex-row items-start gap-6">
               {/* Text */}
               <div className="flex-1 min-w-0">
-                <h2 className="text-2xl font-bold text-white">Vice-Chancellor&apos;s Message</h2>
+                <h2 className="text-2xl font-bold text-white">Acting Vice-Chancellor&apos;s Message</h2>
                 <p className="mt-1 text-green-300 font-semibold">
                   Prof. Leonard Karshima Shilgba
                 </p>
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <div className="rounded-[10px] border border-white/10 bg-white/5 overflow-hidden">
                   <img
                     src="/Uni-Website/Vice-Chancellor.jpeg"
-                    alt="Prof. Leonard Karshima Shilgba, Vice-Chancellor of UAST Ihugh"
+                    alt="Prof. Leonard Karshima Shilgba, Acting Vice-Chancellor of UAST Ihugh"
                     width={256}
                     height={320}
                     loading="lazy"
@@ -139,7 +139,7 @@ export default function AboutPage() {
                   />
                   <div className="p-4 text-center">
                     <p className="text-white font-semibold text-sm">Prof. Leonard Karshima Shilgba</p>
-                    <p className="text-white/60 text-xs mt-1">Vice-Chancellor</p>
+                    <p className="text-white/60 text-xs mt-1">Acting Vice-Chancellor</p>
                   </div>
                 </div>
               </div>
